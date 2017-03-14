@@ -4,18 +4,18 @@ function Queue() {
   var items = [];
   this.enqueue = enqueue;
   this.dequeue = dequeue;
-  this.empty = empty;
+  this.size = size;
 
   this.print = print;
 
   function enqueue(element){
     items.push(element);
   };
-  function denqueue(){
+  function dequeue(){
     return items.shift();
   };
-  function empty() {
-    return items.items.length == 0;
+  function size() {
+    return items.length;
   };
   function print(element){
     return console.log(items.toString());
@@ -28,17 +28,20 @@ nombre.enqueue ("Karla");
 nombre.enqueue ("Pedro");
 nombre.enqueue ("Alan");
 
-var apellido = new Queue();
-apellido.dequeue ("Leguina");
-apellido.dequeue("Rodriguez");
-apellido.dequeue ("Garguño");
-apellido.dequeue ("Donjuan");
-apellido.dequeue ("Perez");
+nombre.print ();
 
-for(var i = 0; i < 5; i ++){
-  nombres.enqueue(nombre.dequeue() + " " + apellido.dequeue());
+var apellido = new Queue();
+apellido.enqueue ("Leguina");
+apellido.enqueue("Rodriguez");
+apellido.enqueue ("Garguño");
+apellido.enqueue ("Donjuan");
+apellido.enqueue ("Perez");
+
+while (nombre.size() > 0){ //los metodos se agregan a las instancias
+  nombres.push(nombre.dequeue() + " " + apellido.dequeue());
 }
 console.log(nombres);
+
 
 /*var nombre = ["Laura", "Tania", "Karla", "Pedro", "Alan"];
 var apellido = ["Lopez", "Ramos", "Camino", "Baez", "Perez"];

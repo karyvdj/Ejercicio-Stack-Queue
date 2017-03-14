@@ -1,6 +1,6 @@
 var nombres = [];
 
-function Stack() {
+function Stack() { //contiene procesos
   var items = [];
 
   this.push = function(element){
@@ -25,14 +25,14 @@ function Stack() {
     console.log(items.toString());
   };
 }
-var nombre = new Stack ();
+var nombre = new Stack (); //instacia de de la clase stack
 nombre.push ("Laura");
 nombre.push ("Tania");
 nombre.push ("Karla");
 nombre.push ("Pedro");
 nombre.push ("Alan");
 
-var apellido = new Stack ();
+var apellido = new Stack ();//instancia de mi clase pila
 apellido.push ("Leguina");
 apellido.push ("Rodriguez");
 apellido.push ("Garguño");
